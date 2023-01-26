@@ -4,3 +4,15 @@
 body{
   font-family: 'Roboto Condensed', sans-serif;
 }
+.cardText{
+  text-align: center;
+}
+
+.card{
+  margin-top: 20px;
+}
+.select{
+ 
+  margin-top: 100px;
+  
+}

@@ -8,7 +8,7 @@ function Days() {
   useEffect(() => {
     
     const getData = async () => {
-      const res = axios(`https://api.weatherbit.io/v2.0/forecast/daily?city=${data.name},TR&key=6540fc89d653ddcf38cef14336301a5a&lang=tr`
+      const res = axios(`https://api.weatherbit.io/v2.0/forecast/daily?city=${data.name},TR&key=e1ce7657976344e59768eda9ca897c94&lang=tr`
       );
       
 
@@ -18,17 +18,18 @@ function Days() {
   }, [data, setWeather]);
 
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card className="card flex flex-row items-center justify-center" >
       {weather.map((item, index) => (
         <Card.Body
           key={index}
-          className="">
-          <Card.Title className="">{days[new Date(item.datetime).getDay()]}</Card.Title>
+          >
+          <Card.Title >{days[new Date(item.datetime).getDay()]}</Card.Title>
           <Card.Img variant="top" src={`https://www.weatherbit.io/static/img/icons/${item.weather.icon}.png`} />
-          <Card.Text className="">
+          <Card.Text >
             {Math.round(item.app_min_temp)}°
-            <br />
-            {Math.round(item.app_max_temp)}°
+            
+            
+            <Card.Text >{Math.round(item.app_max_temp)}°</Card.Text>
           </Card.Text>
         </Card.Body>
 
