@@ -8,7 +8,7 @@ function Days() {
   useEffect(() => {
     
     const getData = async () => {
-      const res = axios(`https://api.weatherbit.io/v2.0/forecast/daily?city=${data.name},TR&key=e1ce7657976344e59768eda9ca897c94&lang=tr`
+      const res = axios(`https://api.weatherbit.io/v2.0/forecast/daily?city=${data.name},TR&key=adf8f11c2b074ed0a99be99e78822fc4&lang=tr`
       );
       
 
